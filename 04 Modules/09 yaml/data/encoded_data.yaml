@@ -1,0 +1,8 @@
+students:
+- Grade:
+  - 14.0
+  - 20
+  Name: Ali
+- Grade: null
+  Name: Masoud
+  is_in_class: true
