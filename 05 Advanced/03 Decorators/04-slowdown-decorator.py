@@ -1,6 +1,7 @@
 import functools
 from time import sleep
 
+
 def slowdown(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -8,6 +9,7 @@ def slowdown(func):
         sleep(1)
         output = func(*args, **kwargs)
         return output
+
     return wrapper
 
 
@@ -19,7 +21,6 @@ def stopwatch(timer: int) -> None:
         print(f"{timer:0>3d}")
         timer -= 1
         stopwatch(timer)
-   
+
 
 stopwatch(10)
-

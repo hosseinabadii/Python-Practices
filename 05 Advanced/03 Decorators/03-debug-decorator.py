@@ -1,5 +1,6 @@
 import functools
 
+
 def debug(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -10,13 +11,15 @@ def debug(func):
         output = func(*args, **kwargs)
         print(f"\n{func.__name__!r} returned {output!r}")
         return output
+
     return wrapper
 
 
 @debug
-def signup(firstname, lastname, * , username, password):
+def signup(firstname, lastname, *, username, password):
     print(f"Hello {firstname} {lastname}")
     print(f"Your username is {username}")
     print(f"Your password is {password}")
+
 
 signup("Khosro", "HosseinAbadi", username="python10", password="123456")

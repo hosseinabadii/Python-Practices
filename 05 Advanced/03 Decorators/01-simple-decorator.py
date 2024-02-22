@@ -1,6 +1,7 @@
-from time import sleep
 import functools
 import os
+from time import sleep
+
 os.system("clear")
 """
 Simple Decorators:
@@ -13,6 +14,7 @@ Uncomment the print function to see it returns True.
 Hint: __closere__ references are read only (immutable), so they aren't able to modify.
 """
 
+
 def time_delay(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -21,7 +23,9 @@ def time_delay(func):
         sleep(1)
         output = func(*args, **kwargs)
         return output
+
     return wrapper
+
 
 @time_delay
 def factorial(n: int) -> int:
@@ -30,6 +34,7 @@ def factorial(n: int) -> int:
     for num in range(1, n + 1):
         fact *= num
     return fact
+
 
 # factorial = time_delay(factorial) replace with syntactic suger @
 print(f"factorial of input  : {factorial(5)}")
