@@ -1,12 +1,13 @@
 import logging
 import os
+
 os.system("clear")
 """
 There are 5 level for logging
 #1 CRITICAL
-    show the logs:  critical 
+    show the logs:  critical
 #2 ERROR
-    show the logs:  critical  error  
+    show the logs:  critical  error
 #3 WARNING
     show the logs:  critical  error  warning
 #4 INFO
@@ -15,11 +16,13 @@ There are 5 level for logging
     show the logs:  critical  error  warning  info  debug
 
 """
+
+
 def main() -> None:
     logging.basicConfig(level=logging.DEBUG)
 
     logging.debug("This is a debug message.")
-    logging.info("This is an info message.")   
+    logging.info("This is an info message.")
     logging.warning("This is a warning message.")
     logging.error("This is an error message.")
     logging.critical("This is a critical message.")
